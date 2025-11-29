@@ -21,9 +21,6 @@ void handle_function_loop(FunctionPtr function_to_call/*, const char* function_n
 
     do
     {
-        /*printf("\n=============================\n");
-        printf("Chuc nang: %s\n", function_name);*/
-
         function_to_call();
 
         do
