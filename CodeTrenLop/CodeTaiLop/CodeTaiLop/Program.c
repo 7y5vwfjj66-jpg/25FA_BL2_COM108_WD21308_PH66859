@@ -49,7 +49,6 @@ void CN1_KiemTraSoNguyen() {
     printf("Chuc nang so 1 : Kiem tra 1 so!\n");
     printf("\n===================================\n");
 
-
 }
 void CN2_TimUocVaBoi() {
     
@@ -100,6 +99,38 @@ void sapXepPhanTuMang1Chieu() {
 
 }
 
+
+void demoMang2Chieu() {
+    
+    //string - "string.h"
+    char mangKyTu[10] = { 'A','n','h' };
+
+    for (int i = 0; i < 3; i++) {
+        scanf(" %c", &mangKyTu[i]);
+    }
+
+    /*for (int i = 0; i < 3; i++) {
+        printf("%c", mangKyTu[i]);
+    }*/
+    puts(mangKyTu);
+    //fgets(mangKyTu);
+
+    int array[2][3];
+    printf("Mang 2 chieu: \n");
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("array[%d][%d] = ", i,j );
+            scanf("%d", &array[i][j]);
+        }
+    }
+    printf("Mang da nhap la: \n");
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("%d ,", array[i][j]);
+        }
+        printf("\n");
+    }
+}
 int main() {
 
     int chon;
@@ -109,6 +140,7 @@ int main() {
         printf("1.  CN1 _ Kiem Tra So Nguyen\n");
         printf("2.  CN2 _ Tim Uoc So Chung Va Boi Chung Cua 2 So\n");
         printf("3. Sap xep mang 1 chieu\n");
+        printf("4. Mang 2 chieu\n");
         printf("0.  THOAT KHOI UNG DUNG\n");
         printf("=============================");
         printf("\nChon Chuc Nang Tren Menu: ");
@@ -122,8 +154,10 @@ int main() {
             break;
         case 3: handle_function_loop(sapXepPhanTuMang1Chieu);
             break;
+        case 4: handle_function_loop(demoMang2Chieu);
+            break;
         default:
-            printf("Chuc nang khong hop le!! Vui long chon chuc nang tu [1-3]!");
+            printf("Chuc nang khong hop le!! Vui long chon chuc nang tu [1-3]!\n");
             break;
         }
     } while (chon != 0);
