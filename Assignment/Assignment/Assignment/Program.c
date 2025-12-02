@@ -213,10 +213,17 @@ void CN6_TinhLaiSuat() {
     
     for( int i =1 ; i<= soThang ; i++){
         double lai = duNo * laiSuat;
-        double tongTra = lai + gocMoiThang;
-        duNo = duNo - gocMoiThang;
+        double gocPhaiTra;
+        if (i == soThang) {
+            gocPhaiTra = duNo;
+        }
+        else {
+            gocPhaiTra = gocMoiThang;
+        }
+        double tongTra = lai + gocPhaiTra;
+        duNo = duNo - gocPhaiTra;
 
-        printf("\n%-10d %-15.2lf  %-15.2lf  %-20.2lf  %-20.2lf VND \n", i, lai, gocMoiThang, tongTra, duNo);
+        printf("\n%-10d %-15.2lf  %-15.2lf  %-20.2lf  %-20.2lf VND \n", i, lai, gocPhaiTra, tongTra, duNo);
     }
 
     printf("\n===================================\n");
